@@ -105,13 +105,12 @@ function mediaRecorderDataAvailable(e) {
     })
     .then((response) => response.json())
     .then(() => {
-        alert("Your recording is saved");
+        console.log("Your recording is saved");
         //reset for next recording
         resetRecording();
         //fetch recordings
         fetchRecordings();
       })
-      
     .catch((err) => {
       console.error(err);
       alert("An error occurred, please try again later");

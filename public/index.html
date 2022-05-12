@@ -10,8 +10,13 @@
   <link href="/css/index.css" rel="stylesheet" />
 </head>
 <body class="pt-5">
-  <div class="container">
-    <h1 class="text-center">Record Your Voice</h1>
+
+
+
+
+  <!-------------------------------------------- part-6 --------------------------------------------->
+  <div class="container part-6">
+    <h1 class="text-center">Record your memory</h1>
     <div class="record-button-container text-center mt-5">
       <button class="bg-transparent border btn record-button rounded-circle shadow-sm text-center" id="recordButton">
         <img src="/images/microphone.png" alt="Record" class="img-fluid" />
@@ -19,18 +24,19 @@
     </div>
   </div>
 
-  <div class="recorded-audio-container mt-5 d-none flex-column justify-content-center align-items-center"
-  id="recordedAudioContainer">
+  <div class="recorded-audio-container mt-5 d-none flex-column justify-content-center align-items-center" id="recordedAudioContainer">
   <div class="actions mt-3">
     <button class="btn btn-success rounded-pill" id="saveButton">Save</button>
     <button class="btn btn-danger rounded-pill" id="discardButton">Discard</button>
   </div>
 </div>
 
-<h2 class="mt-3">Saved Recordings</h2>
-<div class="recordings row" id="recordings">
 
+<h2 class="mt-3 pl-5 container part-6">Saved Recordings</h2>
+<div class="recordings row pl-5" id="recordings">
+<!-- recorded files will dynamicly load here -->
 </div>
+<!-------------------------------------------- part-6 end ------------------------------------------>
 
 
 <script src="/js/record.js"></script>
