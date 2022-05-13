@@ -34,42 +34,46 @@ html, body {
     background-color: #5084d2;
   }
 
-
-  /* moving letters */
-  .ml11 {
-    font-weight: 700;
-    font-size: 3.5em;
-  }
-  
-  .ml11 .text-wrapper {
+  .nostyle-button {
+    font-size: 1.5rem!important;
     position: relative;
-    display: inline-block;
-    padding-top: 0.1em;
-    padding-right: 0.05em;
-    padding-bottom: 0.15em;
-  }
-  
-  .ml11 .line {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    right: 20px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
     opacity: 0;
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background-color: #fff;
-    transform-origin: 0 50%;
+    animation: showme ease .5s normal forwards;
+    animation-delay: 1s;
   }
-  
-  .ml11 .line1 { 
-    top: 0; 
-    left: 0;
+
+  @keyframes showme {
+    from{
+      opacity:0;
+      left:0px;
+    }
+    to{
+      opacity:1;
+      left: 10px;
+    }
   }
-  
-  .ml11 .letter {
-    display: inline-block;
-    line-height: 1em;
+
+  .part-1{
+    display: block;
+    position: relative;
+    opacity: 0;
   }
-  /* moving letters end */
-  
+
+  .animation-class {
+    animation: showme ease .5s normal forwards;
+    animation-delay: .25s;
+  }
+
   .part-6 {
-    display:none;
+    display: none;
+    position: relative;
+    opacity: 0;
   }
