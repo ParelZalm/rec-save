@@ -40,6 +40,7 @@ let myNewText = [
 let  currentText = 0;
 let myText = document.querySelector(".letters");
 let animationBlock = document.querySelector('.part-1');
+let recordBlock = document.querySelector(".part-6");
 
 function resolveAftersec() {
     return new Promise(resolve => {
@@ -51,27 +52,24 @@ function resolveAftersec() {
 
 
 async function nextText(){
-    // for(let i = 0; i < myNewText.lenght; i++){
-    //     if (nextText === 1){
-    //         console.log("yes");
-    //     }
-        
-    // }
+  // if all text has been shown return 
     if (currentText == myNewText.length)
     {
         console.log("the - end")
-        console.log(currentText);
+        animationBlock.style.display = "none";
+        recordBlock.style.display = "block";
+        const result = await resolveAftersec();
+        // recordBlock.classlist.add("animation-class");
         return;
     }
-
+    // add array data for each step + add-remove animation
     animationBlock.classList.remove("animation-class");
     const result = await resolveAftersec();
     myText.innerHTML = myNewText[currentText];
     animationBlock.classList.add("animation-class");
-
+    // count array innerhtml
     if (currentText < myNewText.length || currentText == myNewText.length){
     currentText++;
-    
     }
   }
   
