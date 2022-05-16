@@ -31,17 +31,20 @@
 //     delay: 1000
 //   });
 
-let myNewText = [
+// declare text for nextText()
+const myNewText = [
     "Here you can record and store memories about that special person you lost",
     "This a good way to mourn and it also help others by sharing",
     "example here",
     ]
-
+// intiger to loop over myNewText state
 let  currentText = 0;
-let myText = document.querySelector(".letters");
-let animationBlock = document.querySelector('.part-1');
-let recordBlock = document.querySelector(".part-6");
 
+const myText = document.querySelector(".letters");
+const animationBlock = document.querySelector('.part-1');
+const recordBlock = document.querySelector(".part-6");
+
+// timeout function
 function resolveAftersec() {
     return new Promise(resolve => {
       setTimeout(() => {
@@ -70,10 +73,9 @@ async function nextText(){
     animationBlock.classList.remove('animation-class-outro');
     myText.innerHTML = myNewText[currentText];
     animationBlock.classList.add("animation-class");
-    
-    // count array innerhtml
-    if (currentText < myNewText.length || currentText == myNewText.length){
+
+    // add to intiger counter
     currentText++;
-    }
+
   }
   
