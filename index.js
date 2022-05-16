@@ -1,4 +1,5 @@
 const fs = require('fs');
+// middleware for hndling uploading files in node
 const multer = require('multer');
 
 const storage = multer.diskStorage({
