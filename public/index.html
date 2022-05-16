@@ -23,20 +23,22 @@
  <!--------------------------------------------dynamic text end---------------------------------------->
 
 
-  <div class="container part-6">
-    <h1 class="text-center">Record your story</h1>
-    <div class="record-button-container text-center mt-5">
-      <button class="bg-transparent border btn record-button rounded-circle shadow-sm text-center" id="recordButton">
-        <img src="/images/microphone.png" alt="Record" class="img-fluid" />
-      </button>
-    </div>
+  <div class="container full-page part-6">
+    <div class="rec-block">
+      <h1 class="text-center">Record your story</h1>
+      <div class="record-button-container text-center mt-5">
+        <button class="bg-transparent border btn record-button rounded-circle shadow-sm text-center" id="recordButton">
+          <img src="/images/microphone.png" alt="Record" class="img-fluid" />
+        </button>
+      </div>
   </div>
+  
 
   <div class="recorded-audio-container mt-5 d-none flex-column justify-content-center align-items-center" id="recordedAudioContainer">
   <div class="actions mt-3">
     <button class="btn btn-success rounded-pill" id="saveButton">Save</button>
     <button class="btn btn-danger rounded-pill" id="discardButton">Discard</button>
-  </div>
+</div>
 </div>
 
 
@@ -44,6 +46,8 @@
 <div class="recordings row pl-5" id="recordings">
 <!-- recorded files will dynamicly load here -->
 </div>
+</div>
+<button class="btn btn-danger dev-but" onclick="endText()">End</button>
 <!-------------------------------------------- part-6 end ------------------------------------------>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>

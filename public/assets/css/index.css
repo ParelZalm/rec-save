@@ -92,3 +92,8 @@ html, body {
     opacity: 0;
     animation: showme ease .5s normal forwards;
   }
+  .dev-but {
+    position: absolute;
+    bottom: 10px; 
+    left: 20%;
+  }
