@@ -32,9 +32,9 @@
 //   });
 
 let myNewText = [
-    "Here you can record and store stories about the person you lost",
-    "A beautifull way to remember, and share, with those that want to",
-    "Funny, emotional and everything inbetween, don't be afraid to share",
+    "Here you can record and store memories about that special person you lost",
+    "This a good way to mourn and it also help others by sharing",
+    "example here",
     ]
 
 let  currentText = 0;
@@ -62,11 +62,15 @@ async function nextText(){
         // recordBlock.classlist.add("animation-class");
         return;
     }
-    // add array data for each step + add-remove animation
+    // add array data for each step + add-remove animation in & out
+    animationBlock.classList.add("animation-class-outro");
+    await resolveAftersec();
     animationBlock.classList.remove("animation-class");
-    const result = await resolveAftersec();
+    await resolveAftersec();
+    animationBlock.classList.remove('animation-class-outro');
     myText.innerHTML = myNewText[currentText];
     animationBlock.classList.add("animation-class");
+    
     // count array innerhtml
     if (currentText < myNewText.length || currentText == myNewText.length){
     currentText++;

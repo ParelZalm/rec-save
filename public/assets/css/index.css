@@ -61,6 +61,17 @@ html, body {
     }
   }
 
+  @keyframes hideme {
+    from {
+      opacity: 1;
+      left: 0;
+    }
+    to {
+      opacity: 0;
+      left: -10px;
+    }
+  }
+
   .part-1{
     display: block;
     position: relative;
@@ -70,6 +81,9 @@ html, body {
   .animation-class {
     animation: showme ease .5s normal forwards;
     animation-delay: .25s;
+  }
+  .animation-class-outro {
+    animation: hideme ease .5s normal forwards;
   }
 
   .part-6 {
