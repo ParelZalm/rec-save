@@ -35,9 +35,10 @@
   </div>
   
 
-  <div class="recorded-audio-container recording mt-5 d-none" id="recordedAudioContainer">
+<div class="recorded-audio-container audio-player mt-5 d-none" id="recordedAudioContainer">
     <!-- dynamic audio files -->
-<div class="ikdoeniets"></div>
+
+    <div class="ikdoeniets"></div>
 </div>
 <div class="actions mt-3 d-none">
   <button class="mybtn savecolor" id="saveButton">save</button>
@@ -46,17 +47,18 @@
 
 <div class="preview-recording">
 <h2 class="mt-3 pl-5 container part-6">Saved Recordings</h2>
-<div class="recordings row pl-5" id="recordings">
+<div class="row pl-5" id="recordings">
 <!-- recorded files will dynamicly load here -->
 </div>
 </div>
 </div>
 <button class="btn btn-danger dev-but" onclick="endText()">End</button>
 <!-------------------------------------------- part-6 end ------------------------------------------>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="/js/record.js"></script>
 <script src="/js/letters.js"></script>
+<script src="/js/audioplayer.js"></script>
+
 
 </body>
 </html>

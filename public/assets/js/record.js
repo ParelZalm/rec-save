@@ -6,6 +6,7 @@ const discardAudioButton = document.getElementById('discardButton');
 const saveAudioButton = document.getElementById('saveButton');
 const recordingsContainer = document.getElementById('recordings');
 const actionButtons = document.querySelector('.actions')
+const recordingsDiv = document.querySelector('.audio-player')
 
 
 let chunks = []; //will be used later to record audio
@@ -50,14 +51,17 @@ function mediaRecorderDataAvailable(e) {
     chunks.push(e.data);
   }
 
+  const audioPlayerDom = "<div class=\"player-controls\"><div id=\"radioIcon\"></div><button id=\"playAudio\" onclick=\"thisMediaLoad()\"></button><div id=\"seekObjContainer\"><div id=\"seekObj\"><div id=\"percentage\"></div></div></div><p><small id=\"currentTime\">00:00</small></p></div>";
   function mediaRecorderStop () {
     //check if there are any previous recordings and remove them
     if (recordedAudioContainer.firstElementChild.tagName === 'AUDIO') {
       recordedAudioContainer.firstElementChild.remove();
+      recordingsDiv.innerHTML = "";
     }
     //create a new audio element that will hold the recorded audio
     const audioElm = document.createElement('audio');
-    audioElm.setAttribute('controls', ''); //add controls
+    audioElm.setAttribute('id', 'audio'); //add controls
+    recordingsDiv.innerHTML += audioPlayerDom;
     //create the Blob from the chunks
     audioBlob = new Blob(chunks, { type: 'audio/mp3' });
     const audioURL = window.URL.createObjectURL(audioBlob);
@@ -68,6 +72,7 @@ function mediaRecorderDataAvailable(e) {
     recordedAudioContainer.classList.remove('d-none');
     actionButtons.classList.add('d-flex');
     actionButtons.classList.remove('d-none');
+    document.body.innerHTML += "<script src=\"/js/audioplayer.js\"></script>"
     //reset to default
     mediaRecorder = null;
     chunks = [];
@@ -199,5 +204,9 @@ function mediaRecorderDataAvailable(e) {
       }
     }
   }
+
+
+
   
+
   
