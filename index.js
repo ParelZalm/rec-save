@@ -36,6 +36,8 @@ app.get('/recordings', (req, res) => {
     return res.json({ success: true, files });
   });
 
+app.use('/assets', express.static(path.join(__dirname, '/assets')))
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });

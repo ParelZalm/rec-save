@@ -1,0 +1,151 @@
+html, body {
+  overflow-y: hidden;
+}
+
+.full-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.record-button {
+  height: 4em;
+  width: 4em;
+  border-color: #f3f3f3 !important;
+}
+
+.record-button:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.play-button:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.play-button {
+  height: 8em;
+  width: 8em;
+  background-color: #5084d2;
+}
+
+.img-rec {
+  max-width: 70%;
+  height: auto;
+}
+
+.nostyle-button {
+  font-size: 1.5rem !important;
+  position: relative;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  right: 20px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  opacity: 0;
+  animation: showme ease 0.5s normal forwards;
+  animation-delay: 1s;
+}
+
+@keyframes showme {
+  from {
+    opacity: 0;
+    left: 0px;
+  }
+  to {
+    opacity: 1;
+    left: 10px;
+  }
+}
+@keyframes hideme {
+  from {
+    opacity: 1;
+    left: 0;
+  }
+  to {
+    opacity: 0;
+    left: 1%;
+  }
+}
+.part-1 {
+  display: block;
+  position: relative;
+  opacity: 0;
+}
+
+.animation-class {
+  animation: showme ease 0.5s normal forwards;
+  animation-delay: 0.25s;
+}
+
+.animation-class-outro {
+  animation: hideme ease 0.5s normal forwards;
+}
+
+.part-6 {
+  display: none;
+  position: relative;
+  opacity: 0;
+  animation: showme ease 0.5s normal forwards;
+}
+
+.dev-but {
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
+}
+
+.recording {
+  position: relative;
+  margin-left: 20px;
+  width: 90%;
+  max-width: 500px;
+  height: 80px;
+  background: #fff;
+}
+
+.recording:before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  left: -2px;
+  top: -2px;
+  background: black;
+  z-index: -1;
+}
+
+.mybtn {
+  width: 180px;
+  height: 60px;
+  margin-left: 5x;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid black;
+  outline: none;
+  transition: 0.35s ease-in-out;
+}
+
+.savecolor:hover {
+  transition: 0.35s ease-in-out;
+  background: #6cd483;
+}
+
+.discardcolor:hover {
+  transition: 0.35s ease-in-out;
+  background: #ec804e;
+}
+
+.actions {
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
