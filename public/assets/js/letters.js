@@ -3,13 +3,13 @@ const animationBlock = document.querySelector('.part-1');
 const recordBlock = document.querySelector(".part-6");
 
 // intiger to loop over myNewText state
-let  currentText = 0;
+let currentText = 0;
 
 // declare text for nextText()
 const myNewText = [
-    "Here you can record and store memories about that special person you lost",
-    "This a good way to mourn and it also help others by sharing",
-    "example here",
+    "Here you can record and store memories about a special person you lost",
+    "Not only does this help you remember the good times, it also help others by sharing",
+    "John Doe shared this story with others. It helped not only him but also the mother of his departed friend",
     ]
 
 // timeout function
@@ -48,7 +48,7 @@ async function nextText(){
   }
 
   function endText(){
-    currentText += 3;
+    currentText = 3;
     nextText();
     console.log(currentText);
   }

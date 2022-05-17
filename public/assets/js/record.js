@@ -28,6 +28,7 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
     })
       .then((stream) => {
         mediaRecorder = new MediaRecorder(stream);
+        document.querySelector('.recording-text').innerHTML = "Recording...";
         mediaRecorder.start();
         mediaRecorder.ondataavailable = mediaRecorderDataAvailable;
         mediaRecorder.onstop = mediaRecorderStop;
@@ -40,6 +41,7 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
   } else {
     // stop recording
     mediaRecorder.stop();
+    document.querySelector('.recording-text').innerHTML = "Recording finished";
   }
 }
 
