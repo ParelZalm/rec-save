@@ -105,6 +105,7 @@ html, body {
 
   .recording {
     position: relative;
+    margin-left: 20px;
     width: 90%;
     max-width: 500px;
     height: 80px;
@@ -139,4 +140,8 @@ html, body {
 .discardcolor:hover {
   transition: .35s ease-in-out;
   background: #ec804e;
+}
+
+.actions {
+  margin-left: 20px;
 }
