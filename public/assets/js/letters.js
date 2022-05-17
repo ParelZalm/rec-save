@@ -8,8 +8,8 @@ let currentText = 0;
 // declare text for nextText()
 const myNewText = [
     "Here you can record and store memories about a special person you lost",
-    "Not only does this help you remember the good times, it also help others by sharing",
-    "John Doe shared this story with others. It helped not only him but also the mother of his departed friend",
+    "Not only does this help you save these special memories, it also help others by sharing",
+    "John Doe recorded this story with others. Talking about his memory helped him, and it brought great joy to the mother of his departed friend",
     ]
 
 // timeout function

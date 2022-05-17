@@ -136,7 +136,8 @@ function mediaRecorderDataAvailable(e) {
       if (response.success && response.files) {
         //remove all previous recordings shown
         recordingsContainer.innerHTML = '';
-        actionButtons.innerHTML = '';
+        actionButtons.classList.add('d-none');
+        actionButtons.classList.remove('d-flex');
         response.files.forEach((file) => {
           //create the recording element
           const recordingElement = createRecordingElement(file);
