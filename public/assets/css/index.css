@@ -124,6 +124,7 @@ html, body {
 .mybtn {
     width: 180px;
     height: 60px;
+    margin-left: 5x;
     cursor: pointer;
     background: transparent;
     border: 1px solid black;

@@ -5,6 +5,7 @@ const recordedAudioContainer = document.getElementById('recordedAudioContainer')
 const discardAudioButton = document.getElementById('discardButton');
 const saveAudioButton = document.getElementById('saveButton');
 const recordingsContainer = document.getElementById('recordings');
+const actionButtons = document.querySelector('.actions')
 
 
 let chunks = []; //will be used later to record audio
@@ -65,6 +66,8 @@ function mediaRecorderDataAvailable(e) {
     recordedAudioContainer.insertBefore(audioElm, recordedAudioContainer.firstElementChild);
     recordedAudioContainer.classList.add('d-flex');
     recordedAudioContainer.classList.remove('d-none');
+    actionButtons.classList.add('d-flex');
+    actionButtons.classList.remove('d-none');
     //reset to default
     mediaRecorder = null;
     chunks = [];
@@ -87,6 +90,8 @@ function mediaRecorderDataAvailable(e) {
       //hide recordedAudioContainer
       recordedAudioContainer.classList.add('d-none');
       recordedAudioContainer.classList.remove('d-flex');
+      actionButtons.classList.add('d-none');
+      actionButtons.classList.remove('d-flex');
     }
     //reset audioBlob for the next recording
     audioBlob = null;
@@ -131,6 +136,7 @@ function mediaRecorderDataAvailable(e) {
       if (response.success && response.files) {
         //remove all previous recordings shown
         recordingsContainer.innerHTML = '';
+        actionButtons.innerHTML = '';
         response.files.forEach((file) => {
           //create the recording element
           const recordingElement = createRecordingElement(file);
