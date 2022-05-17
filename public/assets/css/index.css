@@ -105,7 +105,6 @@ html, body {
 
   .recording {
     position: relative;
-    margin: 100px 5% auto 5%;
     width: 90%;
     max-width: 500px;
     height: 80px;
@@ -120,4 +119,23 @@ html, body {
     top: -2px;
     background: black;
     z-index: -1;
+}
+
+.mybtn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid black;
+    outline: none;
+    transition: .35s ease-in-out;
+}
+
+.savecolor:hover {
+  transition: .35s ease-in-out;
+  background: #6cd483;
+}
+.discardcolor:hover {
+  transition: .35s ease-in-out;
+  background: #ec804e;
 }
