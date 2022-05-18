@@ -9,6 +9,9 @@ const storage = multer.diskStorage({
   filename(req, file, cb) {
     const fileNameArr = file.originalname.split('.');
     cb(null, `${Date.now()}.${fileNameArr[fileNameArr.length - 1]}`);
+    // change filename back to orginal filename
+    // create filename in record.js
+    // cb(null, file.originalname)
   },
 });
 const upload = multer({ storage });
