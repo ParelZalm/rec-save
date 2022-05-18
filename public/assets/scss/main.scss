@@ -16,6 +16,12 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
+.center-top-div{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 .record-button {
     height: 4em;
     width: 4em;
@@ -31,9 +37,8 @@ html, body {
   }
   
   .play-button {
-    height: 8em;
-    width: 8em;
-    background-color: #5084d2;
+    height: 4em;
+    width: 4em;
   }
 
   .img-rec {
@@ -108,8 +113,7 @@ html, body {
   .recording {
     position: relative;
     margin-left: 20px;
-    width: 90%;
-    max-width: 500px;
+    max-width: 360px;
     height: 80px;
     background: #fff;
 }
@@ -146,4 +150,8 @@ html, body {
 
 .actions {
   margin-left: 20px;
+}
+
+audio {
+	width: 380px;
 }
