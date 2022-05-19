@@ -110,6 +110,7 @@ html, body {
     position: absolute;
     bottom: 10px; 
     left: 1%;
+    opacity: 0;
   }
 
   .recording {
@@ -186,4 +187,10 @@ bottom: 0;
   width: 340px;
   right: 30px;
   bottom: 45px;
+}
+
+#cloudplay{
+  width: 135px;
+  bottom: 50%;
+  left: 184px;
 }

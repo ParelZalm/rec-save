@@ -9,7 +9,7 @@ let currentText = 0;
 const myNewText = [
     "Here you can record and store memories about a special person you lost",
     "Not only does this help you save these special memories, it also help others by sharing",
-    "John Doe recorded this story with others. Talking about his memory helped him, and it brought great joy to the mother of his departed friend",
+    "John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend",
     ]
 
 // timeout function
