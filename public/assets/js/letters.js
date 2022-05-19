@@ -52,4 +52,29 @@ async function nextText(){
     nextText();
     console.log(currentText);
   }
+
+  anime({
+    targets: '#cloud1',
+    translateY: 7.5,
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 1000,
+  });
+  anime({
+    targets: '#cloud2',
+    translateY: 6,
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 1200,
+  });
+  anime({
+    targets: '#cloud3',
+    translateY: 7.5,
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 1040,
+  });
   

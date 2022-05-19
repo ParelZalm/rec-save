@@ -1,5 +1,6 @@
 html, body {
   overflow-y: hidden;
+  box-shadow: inset 0px 75vh 0px #f0c9ba, inset 0px 90vh 0px #fdeedb, inset 0px 100vh 0px #c8b3b2;
 }
 
 .full-page {
@@ -42,6 +43,7 @@ html, body {
 .img-rec {
   max-width: 70%;
   height: auto;
+  position: relative;
 }
 
 .nostyle-button {
@@ -105,7 +107,7 @@ html, body {
 .dev-but {
   position: absolute;
   bottom: 10px;
-  left: 20%;
+  left: 1%;
 }
 
 .recording {
@@ -154,6 +156,36 @@ html, body {
 
 audio {
   width: 380px;
+}
+
+img, svg {
+  position: absolute;
+  bottom: 0;
+}
+
+#cloud1 {
+  right: 300px;
+  bottom: 200px;
+  width: 115px;
+  z-index: 3;
+}
+
+#cloud2 {
+  width: 130px;
+  right: 300px;
+  bottom: 120px;
+}
+
+#cloud3 {
+  width: 75px;
+  right: 360px;
+  bottom: 215px;
+}
+
+#thinking {
+  width: 340px;
+  right: 30px;
+  bottom: 45px;
 }
 
 /*# sourceMappingURL=main.css.map */
