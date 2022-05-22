@@ -195,4 +195,63 @@ img, svg {
   left: 184px;
 }
 
+.clouds-top {
+  position: absolute;
+  bottom: 40vh;
+}
+
+#ct-1 {
+  width: 80px;
+  left: 67%;
+}
+
+#ct-2 {
+  width: 200px;
+  left: 90%;
+}
+
+#ct-3{
+  width: 160px;
+  left: 55%;
+  bottom: 42%;
+}
+
+#ct-4 {
+  width: 225px;
+  bottom: 49vh;
+}
+
+#ct-5 {
+  width: 175px;
+  left: -110px;
+}
+
+.cloud-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+#c1 {
+  width: 30%;
+  left: -13%;
+  bottom: 10vh;
+}
+
+#c2 {
+  width: 560px;
+  bottom: -12vh;
+  left: -20vh;
+}
+
+#c3 {
+  width: 650px;
+  left: 10vw;
+  bottom: 3vh;
+}
+
+#c4 {
+  width: 700px;
+  bottom: -10vh;
+  left: 19vw;
+}
 /*# sourceMappingURL=main.css.map */
