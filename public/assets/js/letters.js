@@ -1,4 +1,5 @@
 const myText = document.querySelector(".letters");
+const myImg = document.querySelector(".images-wrapper")
 const animationBlock = document.querySelector('.part-1');
 const recordBlock = document.querySelector(".part-6");
 
@@ -8,9 +9,15 @@ let currentText = 0;
 // declare text for nextText()
 const myNewText = [
     "Here you can record and store memories about a special person you lost",
-    "Not only does this help you save these special memories, it also help others by sharing",
+    "Talking about the past helps you and gives others the chance to see new perspectives",
     "John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend",
     ]
+
+// declare images for nextText()
+const myNewImages = [
+  "<img src = \"images/cloud1.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud1\"/><img src = \"images/cloud2.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud2\"/><img src = \"images/cloud3.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud3\"/><img src = \"images/thinking.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"thinking\"/>",
+  "<img src = \"images/climber.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"climber\"/>",
+]
 
 // timeout function
 function resolveAftersec() {
@@ -40,6 +47,8 @@ async function nextText(){
     await resolveAftersec();
     animationBlock.classList.remove('animation-class-outro');
     myText.innerHTML = myNewText[currentText];
+    myImg.innerHTML = myNewImages[currentText];
+    momanimation();
     animationBlock.classList.add("animation-class");
 
     // add to intiger counter
@@ -52,9 +61,7 @@ async function nextText(){
     nextText();
     console.log(currentText);
   }
-
-  let animeclouds = document.querySelectorAll('#c1 #c2')
-
+function momanimation(){
   anime({
     targets: '#cloud1',
     translateY: 7.5,
@@ -79,6 +86,8 @@ async function nextText(){
     direction: 'alternate',
     duration: 1040,
   });
+}
+
   anime({
     targets: ['#c1', '#c3', '#c5', '#c7'],
     translateY: 3,
@@ -95,20 +104,6 @@ async function nextText(){
     direction: 'alternate',
     duration: 1040,
   });
-  // anime({
-  //   targets: ['#ct-1'],
-  //   translateY: 2,
-  //   loop: true,
-  //   easing: 'easeInOutSine',
-  //   direction: 'alternate',
-  //   duration: 1040,
-  // });
-  // anime({
-  //   targets: ['#ct-4', '#ct-2'],
-  //   translateY: 3,
-  //   loop: true,
-  //   easing: 'easeInOutSine',
-  //   direction: 'alternate',
-  //   duration: 1040,
-  // });
-  
+
+
+ 
