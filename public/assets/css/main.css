@@ -232,33 +232,34 @@ img, svg {
 }
 
 #c1 {
-  width: 30%;
-  left: -13%;
-  bottom: 10vh;
+  width: 600px;
+  left: -20vw;
+  bottom: 3vh;
 }
 
 #c2 {
-  width: 560px;
-  bottom: -12vh;
-  left: -20vh;
+  width: 719px;
+  bottom: -16vh;
+  left: -38vh;
 }
 
 #c3 {
-  width: 650px;
-  left: 10vw;
+  width: 690px;
+  left: 3vw;
   bottom: 3vh;
 }
 
 #c4 {
   width: 700px;
   bottom: -10vh;
-  left: 19vw;
+  left: 14vw;
 }
 
 #c5 {
   width: 593px;
-  left: 51%;
-  z-index: -3;;
+  left: 33vw;
+  z-index: -3;
+  bottom: 3vh;
 }
 
 #c6{
@@ -269,7 +270,7 @@ img, svg {
 
 #c7 {
   width: 650px;
-  left: 77vw;
+  left: 55vw;
   z-index: -2;
   bottom: -6vh;
 }

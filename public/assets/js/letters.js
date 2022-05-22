@@ -53,6 +53,8 @@ async function nextText(){
     console.log(currentText);
   }
 
+  let animeclouds = document.querySelectorAll('#c1 #c2')
+
   anime({
     targets: '#cloud1',
     translateY: 7.5,
@@ -77,4 +79,36 @@ async function nextText(){
     direction: 'alternate',
     duration: 1040,
   });
+  anime({
+    targets: ['#c1', '#c3', '#c5', '#c7'],
+    translateY: 3,
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 1040,
+  });
+  anime({
+    targets: ['#c2', '#c4', '#c6'],
+    translateY: 2,
+    loop: true,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 1040,
+  });
+  // anime({
+  //   targets: ['#ct-1'],
+  //   translateY: 2,
+  //   loop: true,
+  //   easing: 'easeInOutSine',
+  //   direction: 'alternate',
+  //   duration: 1040,
+  // });
+  // anime({
+  //   targets: ['#ct-4', '#ct-2'],
+  //   translateY: 3,
+  //   loop: true,
+  //   easing: 'easeInOutSine',
+  //   direction: 'alternate',
+  //   duration: 1040,
+  // });
   
