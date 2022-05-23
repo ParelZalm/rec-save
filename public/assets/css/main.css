@@ -1,13 +1,19 @@
 html, body {
   overflow-y: hidden;
-  /* box-shadow: inset 0px 75vh 0px #f0c9ba, inset 0px 90vh 0px #fdeedb, inset 0px 100vh 0px #c8b3b2; */
-  transition: 'box-shadow', 'background-color';
-  background-image: linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 80%, #FAA0B9 100%);
+  transition: "box-shadow", "background-color";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-image: linear-gradient(#a24b92 0%, rgba(162, 75, 146, 0.6352941176) 60%, rgba(255, 123, 171, 0.5333333333) 100%);
 }
 
 .full-page {
   height: 100vh;
   width: 100vw;
+}
+
+.letters {
+  font-weight: 300;
+  color: white;
+  font-size: 3rem;
 }
 
 .center-div {
@@ -214,7 +220,7 @@ img, svg {
   bottom: 34vh;
 }
 
-#ct-3{
+#ct-3 {
   width: 160px;
   left: 55%;
   bottom: 32vh;
@@ -238,39 +244,42 @@ img, svg {
 
 #c1 {
   width: 600px;
-  left: -20vw;
-  bottom: -3vh;
+  left: -3vw;
+  bottom: 10vh;
+  rotate: -3degrees;
+  transform: rotate(3deg);
 }
 
 #c2 {
-  width: 719px;
-  bottom: -25vh;
-  left: -46vh;
+  width: 495px;
+  bottom: 16vh;
+  left: 99vh;
 }
 
 #c3 {
-  width: 690px;
-  left: 3vw;
-  bottom: -7vh;
+  width: 211px;
+  left: -10vw;
+  bottom: 49vh;
 }
 
 #c4 {
-  width: 700px;
-  bottom: -19vh;
-  left: 14vw;
+  width: 422px;
+  bottom: 69vh;
+  left: 4vw;
 }
 
 #c5 {
-  width: 593px;
-  left: 33vw;
+  width: 446px;
+  left: 48vw;
   z-index: -3;
-  bottom: -7vh;
+  bottom: 61vh;
+  transform: rotate(-1deg);
 }
 
-#c6{
-  width: 800px;
-  left: 70%;
-  bottom: -21vh;
+#c6 {
+  width: 234px;
+  left: 97%;
+  bottom: 85vh;
 }
 
 #c7 {
@@ -280,8 +289,51 @@ img, svg {
   bottom: -19vh;
 }
 
+#c1t {
+  width: -600px;
+  left: -3vw;
+  bottom: 10vh;
+  rotate: -3degrees;
+  transform: rotate(3deg);
+}
+
+#c2t {
+  width: -495px;
+  bottom: 16vh;
+  left: 99vh;
+}
+
+#c3t {
+  width: -211px;
+  left: -10vw;
+  bottom: 49vh;
+}
+
+#c4t {
+  width: -422px;
+  bottom: 69vh;
+  left: 4vw;
+}
+
+#c5t {
+  width: -446px;
+  left: 48vw;
+  z-index: -3;
+  bottom: 61vh;
+  transform: rotate(-1deg);
+}
+
+#c6t {
+  width: -234px;
+  left: 97%;
+  bottom: 85vh;
+}
+
 #climber {
-  width: 425px;
+  width: -425px;
   right: -16vw;
 }
+
+/*# sourceMappingURL=main.css.map */
+
 /*# sourceMappingURL=main.css.map */

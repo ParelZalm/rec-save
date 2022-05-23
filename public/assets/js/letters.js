@@ -48,7 +48,7 @@ async function nextText(){
     animationBlock.classList.remove('animation-class-outro');
     myText.innerHTML = myNewText[currentText];
     myImg.innerHTML = myNewImages[currentText];
-    momanimation();
+    // momanimation();
     animationBlock.classList.add("animation-class");
 
     // add to intiger counter
@@ -56,53 +56,51 @@ async function nextText(){
 
   }
 
-  function endText(){
-    currentText = 3;
-    nextText();
-    console.log(currentText);
-  }
-function momanimation(){
-  anime({
-    targets: '#cloud1',
-    translateY: 7.5,
-    loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-    duration: 1000,
-  });
-  anime({
-    targets: '#cloud2',
-    translateY: 6,
-    loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-    duration: 1200,
-  });
-  anime({
-    targets: '#cloud3',
-    translateY: 7.5,
-    loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-    duration: 1040,
-  });
-}
+//   function endText(){
+//     currentText = 3;
+//     nextText();
+//     console.log(currentText);
+//   }
+// function momanimation(){
+//   anime({
+//     targets: '#cloud1',
+//     translateY: 7.5,
+//     loop: true,
+//     easing: 'easeInOutSine',
+//     direction: 'alternate',
+//     duration: 1000,
+//   });
+//   anime({
+//     targets: '#cloud2',
+//     translateY: 6,
+//     loop: true,
+//     easing: 'easeInOutSine',
+//     direction: 'alternate',
+//     duration: 1200,
+//   });
+//   anime({
+//     targets: '#cloud3',
+//     translateY: 7.5,
+//     loop: true,
+//     easing: 'easeInOutSine',
+//     direction: 'alternate',
+//     duration: 1040,
+//   });
+// }
 
   anime({
-    targets: ['#c1', '#c3', '#c5', '#c7'],
-    translateY: 3,
+    targets: ['#c1', '#c3', '#c5',],
+    translateX: 2000,
     loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-    duration: 1040,
+    easing: 'linear',
+    duration: 100000,
   });
   anime({
     targets: ['#c2', '#c4', '#c6'],
-    translateY: 2,
+    translateX: 2000,
     loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-    duration: 1040,
+    easing: 'linear',
+    duration: 70000,
   });
 
 
