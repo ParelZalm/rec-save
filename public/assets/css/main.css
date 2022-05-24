@@ -1,5 +1,5 @@
 html, body {
-  overflow-y: hidden;
+  overflow: hidden;
   transition: "box-shadow", "background-color";
   font-family: "Plus Jakarta Sans", sans-serif;
   background-image: url("../images/bg.svg");
@@ -222,74 +222,44 @@ img, svg {
   bottom: 40vh;
 }
 
-#ct-1 {
-  width: 80px;
-  left: 67%;
-  bottom: 32vh;
-}
-
-#ct-2 {
-  width: 200px;
-  left: 90%;
-  bottom: 34vh;
-}
-
-#ct-3 {
-  width: 160px;
-  left: 55%;
-  bottom: 32vh;
-}
-
-#ct-4 {
-  width: 225px;
-  bottom: 40vh;
-}
-
-#ct-5 {
-  width: 175px;
-  left: -110px;
-  bottom: 36vh;
-}
-
 .cloud-bottom {
   position: absolute;
   bottom: 0;
 }
 
 #c1 {
-  width: 600px;
-  left: -3vw;
+  width: 537px;
+  left: 13vw;
   bottom: 10vh;
 }
 
 #c2 {
   width: 495px;
-  bottom: 16vh;
-  left: 99vh;
+  bottom: 25vh;
+  left: 65vw;
 }
 
 #c3 {
   width: 211px;
-  left: -10vw;
-  bottom: 49vh;
+  left: 8vw;
+  bottom: 52vh;
 }
 
 #c4 {
   width: 422px;
-  bottom: 69vh;
-  left: 4vw;
+  bottom: 76vh;
+  left: 17vw;
 }
 
 #c5 {
-  width: 446px;
-  left: 48vw;
-  z-index: -3;
-  bottom: 61vh;
+  width: 366px;
+  left: 65vw;
+  bottom: 68vh;
 }
 
 #c6 {
-  width: 234px;
-  left: 97%;
+  width: 171px;
+  left: 85vw;
   bottom: 85vh;
 }
 
@@ -344,8 +314,8 @@ img, svg {
 
 #s1 {
   width: 15px;
-  left: 1vw;
-  top: 35vh;
+  left: 52vw;
+  top: 11vh;
 }
 
 #s2 {
@@ -356,20 +326,20 @@ img, svg {
 
 #s3 {
   width: 15px;
-  left: 29vw;
-  bottom: 7vh;
+  left: 15vw;
+  bottom: 4vh;
 }
 
 #s4 {
   width: 18px;
-  right: 5vw;
-  bottom: 20vh;
+  right: 16vw;
+  bottom: 10vh;
 }
 
 #s5 {
   width: 18px;
   right: 5vw;
-  bottom: 20vh;
+  bottom: 56vh;
 }
 
 /*# sourceMappingURL=main.css.map */

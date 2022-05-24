@@ -8,7 +8,7 @@ let currentText = 0;
 
 // declare text for nextText()
 const myNewText = [
-    "Here you can record and store memories about a special person you lost",
+    "Here you can record and store memories of a loved one who has passed away",
     "<h2>Talking about the past helps you and gives others the chance to see new perspectives</h2>",
     "<h2>John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend</h2>",
     ]
