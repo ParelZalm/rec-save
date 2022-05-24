@@ -61,17 +61,20 @@ html, body {
   font-size: 1.5rem !important;
   position: relative;
   background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
+  border: 2px solid;
   right: 20px;
   font: inherit;
   cursor: pointer;
-  outline: inherit;
+  width: 150px;
+  height: 55px;
   opacity: 0;
   animation: showme ease 0.5s normal forwards;
   animation-delay: 1s;
   color:white;
+}
+
+.nostyle-button:hover{
+  background-image: url('../images/bg.svg');
 }
 
 @keyframes showme {
@@ -332,13 +335,32 @@ img, svg {
 }
 
 #s1{
-  width: 20px;
+  width: 15px;
   left: 1vw;
   top: 35vh;
 }
 #s2{
-  width: 20px;
+  width: 15px;
   left: 39vw;
   top: 17vh;
 }
+
+#s3{
+  width: 15px;
+  left: 29vw;
+  bottom: 7vh;
+}
+
+#s4 {
+  width: 18px;
+  right: 5vw;
+  bottom: 20vh;
+}
+
+#s5 {
+  width: 18px;
+  right: 5vw;
+  bottom: 20vh;
+}
+
 /*# sourceMappingURL=main.css.map */
