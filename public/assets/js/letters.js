@@ -9,14 +9,14 @@ let currentText = 0;
 // declare text for nextText()
 const myNewText = [
     "Here you can record and store memories about a special person you lost",
-    "Talking about the past helps you and gives others the chance to see new perspectives",
-    "John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend",
+    "<h2>Talking about the past helps you and gives others the chance to see new perspectives</h2>",
+    "<h2>John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend</h2>",
     ]
 
 // declare images for nextText()
 const myNewImages = [
   "<img src = \"images/cloud1.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud1\"/><img src = \"images/cloud2.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud2\"/><img src = \"images/cloud3.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud3\"/><img src = \"images/thinking.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"thinking\"/>",
-  "<img src = \"images/climber.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"climber\"/>",
+  // "<img src = \"images/climber.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"climber\"/>",
 ]
 
 // timeout function
@@ -88,20 +88,20 @@ async function nextText(){
 //   });
 // }
 
-  anime({
-    targets: ['#c1', '#c3', '#c5',],
-    translateX: 2000,
-    loop: true,
-    easing: 'linear',
-    duration: 100000,
-  });
-  anime({
-    targets: ['#c2', '#c4', '#c6'],
-    translateX: 2000,
-    loop: true,
-    easing: 'linear',
-    duration: 70000,
-  });
+  // anime({
+  //   targets: ['#c1', '#c3', '#c5',],
+  //   translateX: 2000,
+  //   loop: true,
+  //   easing: 'linear',
+  //   duration: 100000,
+  // });
+  // anime({
+  //   targets: ['#c2', '#c4', '#c6'],
+  //   translateX: 2000,
+  //   loop: true,
+  //   easing: 'linear',
+  //   duration: 70000,
+  // });
 
 
  

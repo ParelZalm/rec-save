@@ -2,7 +2,10 @@ html, body {
   overflow-y: hidden;
   transition: 'box-shadow', 'background-color';
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-image: linear-gradient(#a24b92 0%, #a24b92a2 60%, #ff7bab88 100%);
+  // background-image: linear-gradient(#a24b92 0%, #a24b92a2 60%, #ff7bab88 100%);
+  background-image: url("../images/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .full-page {
@@ -68,6 +71,7 @@ html, body {
   opacity: 0;
   animation: showme ease 0.5s normal forwards;
   animation-delay: 1s;
+  color:white;
 }
 
 @keyframes showme {
@@ -246,8 +250,6 @@ img, svg {
   width: 600px;
   left: -3vw;
   bottom: 10vh;
-  rotate: (-3degrees);
-  transform: rotate(3deg);
 }
 
 #c2 {
@@ -273,7 +275,6 @@ img, svg {
   left: 48vw;
   z-index: -3;
   bottom: 61vh;
-  transform: rotate(-1deg);
 }
 
 #c6{
@@ -292,8 +293,6 @@ img, svg {
   width: -600px;
   left: -3vw;
   bottom: 10vh;
-  rotate: (-3degrees);
-  transform: rotate(3deg);
 }
 
 #c2t {
@@ -319,7 +318,6 @@ img, svg {
   left: 48vw;
   z-index: -3;
   bottom: 61vh;
-  transform: rotate(-1deg);
 }
 
 #c6t {
@@ -331,5 +329,16 @@ img, svg {
 #climber {
   width: -425px;
   right: -16vw;
+}
+
+#s1{
+  width: 20px;
+  left: 1vw;
+  top: 35vh;
+}
+#s2{
+  width: 20px;
+  left: 39vw;
+  top: 17vh;
 }
 /*# sourceMappingURL=main.css.map */
