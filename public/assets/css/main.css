@@ -72,10 +72,6 @@ html, body {
   color: white;
 }
 
-.nostyle-button:hover {
-  background-image: url("../images/bg.svg");
-}
-
 @keyframes showme {
   from {
     opacity: 0;

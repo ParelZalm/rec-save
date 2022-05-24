@@ -73,10 +73,6 @@ html, body {
   color:white;
 }
 
-.nostyle-button:hover{
-  background-image: url('../images/bg.svg');
-}
-
 @keyframes showme {
   from {
     opacity: 0;
@@ -159,6 +155,7 @@ html, body {
 .savecolor:hover {
   transition: 0.35s ease-in-out;
   background: #6cd483;
+  
 }
 
 .discardcolor:hover {
