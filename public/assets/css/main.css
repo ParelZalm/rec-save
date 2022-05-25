@@ -82,6 +82,8 @@ html, body {
 
 .skipb {
   border: none;
+  width: 200px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @keyframes showme {

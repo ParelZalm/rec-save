@@ -1,5 +1,6 @@
 const myText = document.querySelector(".letters");
 const myImg = document.querySelector(".images-wrapper")
+const myBtn = document.querySelector('.conversation-buttons')
 const animationBlock = document.querySelector('.part-1');
 const recordBlock = document.querySelector(".part-6");
 
@@ -8,15 +9,23 @@ let currentText = 0;
 
 // declare text for nextText()
 const myNewText = [
-    "Here you can record and store memories of a loved one who has passed away",
-    "<h2>Talking about the past helps you and gives others the chance to see new perspectives</h2>",
+    "Add your memories to the cloud and help save them for eternity",
+    "<h2>(episodic memory) Tennis, Dinner or that one vacation where you guys got a bit too drunk?</h2>",
     "<h2>John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend</h2>",
     ]
 
 // declare images for nextText()
 const myNewImages = [
-  "<img src = \"images/cloud1.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud1\"/><img src = \"images/cloud2.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud2\"/><img src = \"images/cloud3.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"cloud3\"/><img src = \"images/thinking.svg\" alt=\"playcloud\" class=\"clouds-top\" id=\"thinking\"/>",
   // "<img src = \"images/climber.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"climber\"/>",
+  // "<img src = \"images/climber.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"climber\"/>",
+
+]
+
+// declare buttons for nextText()
+const myNewButtons = [
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">More</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">start recording</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">No</button>",
+
 ]
 
 // timeout function
@@ -28,6 +37,14 @@ function resolveAftersec() {
     });
   }
 
+function goToRecord(){
+  // set intiger to end
+  currentText = myNewText.length;
+  // set display to record block
+  animationBlock.style.display = "none";
+  recordBlock.style.display = "block";
+
+}
 
 async function nextText(){
   // if all text has been shown return 
@@ -48,6 +65,7 @@ async function nextText(){
     animationBlock.classList.remove('animation-class-outro');
     myText.innerHTML = myNewText[currentText];
     myImg.innerHTML = myNewImages[currentText];
+    myBtn.innerHTML = myNewButtons[currentText];
     // momanimation();
     animationBlock.classList.add("animation-class");
 
