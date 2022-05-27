@@ -3,14 +3,16 @@ const myImg = document.querySelector(".images-wrapper")
 const myBtn = document.querySelector('.conversation-buttons')
 const animationBlock = document.querySelector('.part-1');
 const recordBlock = document.querySelector(".part-6");
+const animeBg = document.querySelector('.bg-class');
+let currentbgsize = 0;
 
 // intiger to loop over myNewText state
 let currentText = 0;
 
 // declare text for nextText()
 const myNewText = [
-    "Add your memories to the cloud and help save them for eternity",
-    "<h2>(episodic memory) Tennis, Dinner or that one vacation where you guys got a bit too drunk?</h2>",
+    "Hover the clouds to hear what people have shared",
+    "What kind of story would you save for eternity: <input placeholder=\"Holiday\" type=\"text\" name=\"fname\" autofocus />",
     "<h2>John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend</h2>",
     ]
 
@@ -23,8 +25,8 @@ const myNewImages = [
 
 // declare buttons for nextText()
 const myNewButtons = [
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">More</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">start recording</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">No</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
 
 ]
 
@@ -57,6 +59,7 @@ async function nextText(){
         // recordBlock.classlist.add("animation-class");
         return;
     }
+    currentbgsize += 100;
     // add array data for each step + add-remove animation in & out
     animationBlock.classList.add("animation-class-outro");
     await resolveAftersec();
@@ -71,6 +74,9 @@ async function nextText(){
 
     // add to intiger counter
     currentText++;
+
+    // use currenttext as intiger for bg top styling 
+    animeBg.style.top = -currentText*1000 + 'px';
 
   }
 
