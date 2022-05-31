@@ -8,10 +8,9 @@ html, body {
   position: absolute;
   z-index: -10;
   width: 100vw;
-  height: 421vh;
+  height: 448vh;
   background-image: url("../images/bg_1.svg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   top: 0;
   transition: 1s ease all;
 }
@@ -358,6 +357,37 @@ img, svg {
   width: 18px;
   right: 5vw;
   bottom: 56vh;
+}
+
+#soccer {
+  width: 84px;
+  left: 23vw;
+  bottom: 16vh;
+}
+
+#couch {
+  width: 84px;
+  right: 17vw;
+  bottom: 30vh;
+}
+
+#love {
+  width: 84px;
+  right: 23vw;
+  bottom: 75vh;
+}
+
+#walk {
+  width: 420px;
+  left: 2vw;
+  bottom: 2vh;
+}
+
+.cloud-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transition: all 1s ease;
 }
 
 /*# sourceMappingURL=main.css.map */

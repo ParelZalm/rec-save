@@ -18,8 +18,8 @@ const myNewText = [
 
 // declare images for nextText()
 const myNewImages = [
-  // "<img src = \"images/climber.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"climber\"/>",
-  // "<img src = \"images/climber.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"climber\"/>",
+  "<  <img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
+  "<img src = \"images/walk.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\"/>",
 
 ]
 
