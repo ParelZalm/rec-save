@@ -4,6 +4,7 @@ const myBtn = document.querySelector('.conversation-buttons')
 const animationBlock = document.querySelector('.part-1');
 const recordBlock = document.querySelector(".part-6");
 const animeBg = document.querySelector('.bg-class');
+let soccerImg;
 let currentbgsize = 0;
 
 // intiger to loop over myNewText state
@@ -28,6 +29,7 @@ const myNewImages = [
 const myNewButtons = [
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button>",
 
 ]
 
@@ -80,6 +82,10 @@ async function nextText(){
     // use currenttext as intiger for bg top styling 
     animeBg.style.top = -currentText*1000 + 'px';
 
+    if (currentText == 1){
+      soccerImg = document.querySelector('#soccer');
+    }
+
     if (currentText == 2) {
       cloudMove();
       walkingMove();
@@ -109,6 +115,14 @@ function walkingMove(){
     duration: 1000,
   });
 };
+
+soccerImg.addEventListener("pointerdown", e => {
+  startPreviewMusic(e);
+})
+
+function startPreviewMusic(e){
+  console.log("this element");
+}
 
 //   function endText(){
 //     currentText = 3;
