@@ -395,16 +395,6 @@ img, svg {
   width: 100vw;
 }
 
-.inputtext {
-  border: 0;
-  outline: 0;
-  border-bottom: 2px solid rgb(255, 255, 255);
-  background: white;
-  width: 31%;
-  color: #2b0000;
-  font-size: 2rem;
-}
-
 .selectpicker {
   width: 265px;
   height: 51px;
@@ -416,8 +406,9 @@ img, svg {
   border-radius: 21px;
 }
 
-.bootstrap-select > .dropdown-menu {
-  opacity: 0;
+select.selectpicker > option {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
