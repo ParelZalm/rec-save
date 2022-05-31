@@ -12,14 +12,15 @@ let currentText = 0;
 // declare text for nextText()
 const myNewText = [
     "Hover the clouds to hear what people have shared",
-    "What kind of story would you save for eternity: <input placeholder=\"Holiday\" type=\"text\" name=\"fname\" autofocus />",
+    // "What kind of story would you save for eternity: <input placeholder=\"Holiday\" type=\"text\" class=\"inputtext\" name=\"fname\" autofocus />",
+    "What kind of story would you save for eternity: <select class=\"selectpicker\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Night Out\">Night out</option><option value=\"Sports\">Sports</option><option value=\"Holiday\">Holiday</option><option value=\"Event\">Event</option><option value=\"Else\">Something Else</option></select>",
     "<h2>John Doe recorded this example for you here. Talking about his memory helped him, and it brought great joy to the mother of his departed friend</h2>",
     ]
 
 // declare images for nextText()
 const myNewImages = [
-  "<  <img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
-  "<img src = \"images/walk.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\"/>",
+  "<img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
+  "<img src = \"images/walk.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\" style=\"transform: translateY(500px);\"/>",
 
 ]
 
@@ -38,6 +39,7 @@ function resolveAftersec() {
       }, 250);
     });
   }
+
 
 function goToRecord(){
   // set intiger to end
@@ -78,22 +80,42 @@ async function nextText(){
     // use currenttext as intiger for bg top styling 
     animeBg.style.top = -currentText*1000 + 'px';
 
+    if (currentText == 2) {
+      cloudMove();
+      walkingMove();
+    }
+
   }
+
+  function cloudMove(){
+  anime({
+    targets: '.cloud-container',
+    translateY: -625,
+    loop: false,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    duration: 1000,
+  });
+};
+
+function walkingMove(){
+  anime({
+    targets: '#walk',
+    translateY: -50,
+    loop: false,
+    easing: 'easeInOutSine',
+    direction: 'alternate',
+    delay: 1000,
+    duration: 1000,
+  });
+};
 
 //   function endText(){
 //     currentText = 3;
 //     nextText();
 //     console.log(currentText);
 //   }
-// function momanimation(){
-//   anime({
-//     targets: '#cloud1',
-//     translateY: 7.5,
-//     loop: true,
-//     easing: 'easeInOutSine',
-//     direction: 'alternate',
-//     duration: 1000,
-//   });
+
 //   anime({
 //     targets: '#cloud2',
 //     translateY: 6,
