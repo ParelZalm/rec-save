@@ -11,6 +11,7 @@ html, body {
   height: 448vh;
   background-image: url("../images/bg_1.svg");
   background-repeat: no-repeat;
+  background-size: 2000px;
   top: 0;
   transition: 1s ease all;
 }
@@ -363,18 +364,33 @@ img, svg {
   width: 84px;
   left: 23vw;
   bottom: 16vh;
+  z-index: 20;
+  transition: all .5s ease;
+}
+#soccer:hover {
+  transform: scale(1.2);
 }
 
 #couch {
   width: 84px;
   right: 17vw;
   bottom: 30vh;
+  z-index: 20;
+  transition: all .5s ease;
+}
+#couch:hover {
+  transform: scale(1.2);
 }
 
 #love {
   width: 84px;
   right: 23vw;
   bottom: 75vh;
+  z-index: 20;
+  transition: all .5s ease;
+}
+#love:hover {
+  transform: scale(1.2);
 }
 
 #walk {
