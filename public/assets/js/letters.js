@@ -5,6 +5,7 @@ const animationBlock = document.querySelector('.part-1');
 const recordBlock = document.querySelector(".part-6");
 const animeBg = document.querySelector('.bg-class');
 const selectHTML = document.querySelector('.innerSelectedHtml');
+let selectedVal;
 let currentbgsize = 0;
 
 // intiger to loop over myNewText state
@@ -33,12 +34,12 @@ const myNewButtons = [
 
 ]
 
+// document and save selet value for later use in goToRecord()
 function inputvReadValue(){
-let selectedVal = document.querySelector("select").value;
-console.log(selectedVal);
+selectedVal = document.querySelector("select").value;
 selectHTML.innerHTML = selectedVal;
-
 }
+
 
 // timeout function
 function resolveAftersec() {
@@ -89,17 +90,14 @@ async function nextText(){
     // use currenttext as intiger for bg top styling 
     animeBg.style.top = -currentText*1000 + 'px';
 
+    // set images based on current text
     if (currentText == 1){
       soccerImg = document.querySelector('#soccer');
     }
-
     if (currentText == 2) {
       cloudMove();
       walkingMove();
     }
-    if (currentText == 3){
-    }
-
   }
 
   function cloudMove(){
