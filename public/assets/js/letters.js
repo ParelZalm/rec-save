@@ -11,7 +11,7 @@ let currentText = 0;
 
 // declare text for nextText()
 const myNewText = [
-    "Here you can save precious stories about a lost one. Hover the clouds to hear what people have shared <audio id='mySound' src='http://upload.wikimedia.org/wikipedia/commons/6/6f/Cello_Live_Performance_John_Michel_Tchaikovsky_Violin_Concerto_3rd_MVT_applaused_cut.ogg'/>",
+    "Here you can save precious stories about a lost one. Hover the clouds to hear what people have shared <audio id='mySound' src='../examples/m1.mp3'/>",
     // "What kind of story would you save for eternity: <input placeholder=\"Holiday\" type=\"text\" class=\"inputtext\" name=\"fname\" autofocus />",
     "What kind of story would you save for eternity: <select class=\"selectpicker\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Night Out\">Night out</option><option value=\"Sports\">Sports</option><option value=\"Holiday\">Holiday</option><option value=\"Event\">Event</option><option value=\"Else\">Something Else</option></select>",
     "<h2>Perhaps another step explaining or asking something for engagement?</h2>",
