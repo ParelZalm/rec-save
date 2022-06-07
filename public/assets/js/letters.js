@@ -5,6 +5,8 @@ const animationBlock = document.querySelector('.part-1');
 const recordBlock = document.querySelector(".part-6");
 const animeBg = document.querySelector('.bg-class');
 const selectHTML = document.querySelector('.innerSelectedHtml');
+const grayThis = document.querySelector('.gray-out');
+const centerDiv = document.querySelector('.center-div');
 let selectedVal;
 let currentbgsize = 0;
 
@@ -138,11 +140,16 @@ function removeWalkingMove(){
 function PlaySound(soundobj) {
   let thissound = document.getElementById(soundobj);
   thissound.play();
+  grayThis.classList.add('smooth-gray');
+  centerDiv.style = 'opacity: 0;';
+  console.log(this.e);
 }
 
 function StopSound(soundobj) {
   let thissound = document.getElementById(soundobj);
   thissound.pause();
+  grayThis.classList.remove('smooth-gray');
+  centerDiv.style = 'opacity: 1;';
   // thissound.currentTime = 0;
 }
 

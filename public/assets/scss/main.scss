@@ -39,6 +39,7 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: .5s ease all;
 }
 
 .center-top-div {
@@ -429,5 +430,16 @@ select.selectpicker > option {
   width: 50%;
 }
 
+.gray-out {
+  transition: all .5s linear;
+  position: absolute;
+  width: 101vw;
+  height: 101vh;
+}
+
+.smooth-gray{
+  filter: grayscale(100%);
+  background: cadetblue;
+}
 
 /*# sourceMappingURL=main.css.map */
