@@ -366,10 +366,11 @@ img, svg {
   bottom: 16vh;
   z-index: 20;
   transition: 0.5s ease all;
+  cursor: pointer;
 }
 
 #soccer:hover {
-  transform: scale(1.2);
+  transform: scale(1.6);
 }
 
 #couch {

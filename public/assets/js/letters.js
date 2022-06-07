@@ -95,6 +95,8 @@ async function nextText(){
     // set images based on current text
     if (currentText == 1){
       soccerImg = document.querySelector('#soccer');
+      loveImg = document.querySelector('#love');
+      couchImg = document.querySelector('#couch');
     }
     if (currentText == 2) {
       cloudMove();
@@ -142,7 +144,6 @@ function PlaySound(soundobj) {
   thissound.play();
   grayThis.classList.add('smooth-gray');
   centerDiv.style = 'opacity: 0;';
-  console.log(this.e);
 }
 
 function StopSound(soundobj) {
