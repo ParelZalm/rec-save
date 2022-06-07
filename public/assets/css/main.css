@@ -11,7 +11,6 @@ html, body {
   height: 448vh;
   background-image: url("../images/bg_1.svg");
   background-repeat: no-repeat;
-  background-size: 2000px;
   top: 0;
   transition: 1s ease all;
 }

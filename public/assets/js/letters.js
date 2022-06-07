@@ -143,7 +143,7 @@ function PlaySound(soundobj) {
 function StopSound(soundobj) {
   let thissound = document.getElementById(soundobj);
   thissound.pause();
-  thissound.currentTime = 0;
+  // thissound.currentTime = 0;
 }
 
 //   function endText(){
