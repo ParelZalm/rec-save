@@ -8,21 +8,21 @@ const selectHTML = document.querySelector('.innerSelectedHtml');
 const grayThis = document.querySelector('.gray-out');
 const centerDiv = document.querySelector('.center-div');
 let selectedVal;
-let currentbgsize = 0;
+
 
 // intiger to loop over myNewText state
 let currentText = 0;
 
 // declare text for nextText()
 const myNewText = [
-    "Here you can save precious stories about a lost one. Hover the clouds to hear what people have shared <audio id='mySound' src='../examples/m1.mp3'/>",
-    // "What kind of story would you save for eternity: <input placeholder=\"Holiday\" type=\"text\" class=\"inputtext\" name=\"fname\" autofocus />",
-    "What Theme would fit your story? <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Night Out\">Night out</option><option value=\"Sports\">Sports</option><option value=\"Holiday\">Holiday</option><option value=\"Event\">Event</option><option value=\"Else\">Something Else</option></select>",
-    "<h2>Perhaps another step explaining or asking something for engagement?</h2>",
-    ]
+    "What story would you like to record today? <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
+    "Hover the clouds to hear what people have shared <audio id='mySound' src='../examples/m1.mp3'/>",
+    "Are you ready to record your own memory?",
+]
 
 // declare images for nextText()
 const myNewImages = [
+  "",
   "<img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\" onmouseover=\"PlaySound('mySound')\" onmouseout=\"StopSound('mySound')\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
   "<img src = \"images/walk.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\" style=\"transform: translateY(500px);\"/>",
 
@@ -30,9 +30,9 @@ const myNewImages = [
 
 // declare buttons for nextText()
 const myNewButtons = [
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
 
 ]
 
@@ -71,9 +71,10 @@ async function nextText(){
         recordBlock.style.display = "block";
         await resolveAftersec();
         // recordBlock.classlist.add("animation-class");
+        animeBg.style.top = -currentText*1000 + 'px';
         return;
     }
-    currentbgsize += 100;
+
     // add array data for each step + add-remove animation in & out
     animationBlock.classList.add("animation-class-outro");
     await resolveAftersec();
@@ -92,16 +93,23 @@ async function nextText(){
     // use currenttext as intiger for bg top styling 
     animeBg.style.top = -currentText*1000 + 'px';
 
+
+
     // set images based on current text
     if (currentText == 1){
       soccerImg = document.querySelector('#soccer');
       loveImg = document.querySelector('#love');
       couchImg = document.querySelector('#couch');
+      console.log(animeBg.style.top);
     }
     if (currentText == 2) {
+      
+    }
+    if (currentText == 3) {
       cloudMove();
       walkingMove();
     }
+
   }
 
   function cloudMove(){
