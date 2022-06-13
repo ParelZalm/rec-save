@@ -399,8 +399,9 @@ img, svg {
 }
 
 #walk {
-  width: 420px;
-  left: 2vw;
+  width: 220px;
+  left: 15vw;
+  bottom: -5vh;
 }
 
 .cloud-container {
