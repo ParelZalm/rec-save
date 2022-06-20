@@ -8,10 +8,9 @@ html, body {
   position: absolute;
   z-index: -10;
   width: 100vw;
-  height: 448vh;
+  height: 600vh;
   background-image: url("../images/bg_1.svg");
   background-repeat: no-repeat;
-  background-size: 2000px;
   top: 0;
   transition: 1s ease all;
 }
@@ -31,7 +30,7 @@ input {
 .letters {
   font-weight: 300;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .center-div {
@@ -399,9 +398,9 @@ img, svg {
 }
 
 #walk {
-  width: 220px;
+  width: 200px;
   left: 15vw;
-  bottom: -5vh;
+  bottom: -3vh;
 }
 
 .cloud-container {

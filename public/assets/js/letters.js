@@ -13,15 +13,19 @@ let selectedVal;
 // intiger to loop over myNewText state
 let currentText = 0;
 
+
+// 
 // declare text for nextText()
 const myNewText = [
-    "What story would you like to record today? <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
+    "Your priceless memories, stored in perpetuity on the blockchain. Support yourself and close ones in gaining new perspectives.",
+    "Finding just one story to tell could be difficult. Choose any of these topics to guide you in creating a theme.  <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
     "Hover the clouds to hear what people have shared <audio id='mySound' src='../examples/m1.mp3'/>",
     "Are you ready to record your own memory?",
 ]
 
 // declare images for nextText()
 const myNewImages = [
+  "",
   "",
   "<img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\" onmouseover=\"PlaySound('mySound')\" onmouseout=\"StopSound('mySound')\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
   "<img src = \"images/friendship.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\" style=\"transform: translateY(500px);\"/>",
@@ -30,8 +34,8 @@ const myNewImages = [
 
 // declare buttons for nextText()
 const myNewButtons = [
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button><button class=\"nostyle-button nextb mt-3 mx-2\" onClick=\"nextText()\">Go Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
 
 ]
@@ -70,8 +74,6 @@ async function nextText(){
         animationBlock.style.display = "none";
         recordBlock.style.display = "block";
         await resolveAftersec();
-        // recordBlock.classlist.add("animation-class");
-        animeBg.style.top = -currentText*1000 + 'px';
         return;
     }
 
@@ -90,24 +92,25 @@ async function nextText(){
     // add to intiger counter
     currentText++;
 
-    // use currenttext as intiger for bg top styling 
-    animeBg.style.top = -currentText*1000 + 'px';
-
-
-
     // set images based on current text
     if (currentText == 1){
       soccerImg = document.querySelector('#soccer');
       loveImg = document.querySelector('#love');
       couchImg = document.querySelector('#couch');
       console.log(animeBg.style.top);
+      // use currenttext as intiger for bg top styling 
+      animeBg.style.top = -currentText*1000 + 'px';
     }
     if (currentText == 2) {
-      
+      animeBg.style.top = -currentText*1000 + 'px';
     }
     if (currentText == 3) {
+
+    }
+    if (currentText == 4){
       cloudMove();
       walkingMove();
+      animeBg.style.top = '-3100px';
     }
 
   }
