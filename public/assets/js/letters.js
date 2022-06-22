@@ -17,9 +17,9 @@ let currentText = 0;
 // 
 // declare text for nextText()
 const myNewText = [
-    "Your priceless memories, stored in perpetuity on the blockchain. Support yourself and close ones in gaining new perspectives.",
-    "Finding just one story to tell could be difficult. Choose any of these topics to guide you in creating a theme.  <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
-    "Hover the clouds to hear what people have shared <audio id='mySound' src='../examples/m1.mp3'/>",
+    "Preserve your memories of loved ones in an NFT so that they can be cherished forever. Ready to start recording?",
+    "Let's consider a theme before we begin. <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
+    "These are a few samples that our users have submitted. To begin listening, simply hover your cursor over one of the images. <audio id='mySound' src='../examples/m1.mp3'/>",
     "Are you ready to record your own memory?",
 ]
 
@@ -29,14 +29,16 @@ const myNewImages = [
   "",
   "<img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\" onmouseover=\"PlaySound('mySound')\" onmouseout=\"StopSound('mySound')\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
   "<img src = \"images/friendship.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\" style=\"transform: translateY(500px);\"/>",
+  "<img src = \"images/record-guy.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"record-guy\" style=\"transform: translateY(500px);\"/>",
 
 ]
 
 // declare buttons for nextText()
 const myNewButtons = [
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button><button class=\"nostyle-button nextb mt-3 mx-2\" onClick=\"nextText()\">Go Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3 mx-2\" onClick=\"nextText()\">Not yet</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">More</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Not yet</button>",
 
 ]
 
@@ -71,8 +73,13 @@ async function nextText(){
     if (currentText == myNewText.length)
     {
         console.log("the - end")
+        removeWalkingMove();
+        await resolveAftersec();
+        await resolveAftersec();
+        await resolveAftersec();
         animationBlock.style.display = "none";
         recordBlock.style.display = "block";
+        myImg.innerHTML = myNewImages[currentText];
         await resolveAftersec();
         return;
     }
@@ -112,7 +119,6 @@ async function nextText(){
       walkingMove();
       animeBg.style.top = '-3100px';
     }
-
   }
 
   function cloudMove(){
@@ -141,12 +147,12 @@ function walkingMove(){
 function removeWalkingMove(){
   anime({
     targets: '#walk',
-    translateZ: -50,
+    translateY: 300,
     loop: false,
     easing: 'easeInOutSine',
     direction: 'alternate',
-    delay: 1000,
-    duration: 1000,
+    delay: 0,
+    duration: 500,
   });
 }
 

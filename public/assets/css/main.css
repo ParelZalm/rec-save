@@ -403,6 +403,13 @@ img, svg {
   bottom: -3vh;
 }
 
+#record-guy {
+  width: 500px;
+  left: 60vw;
+  bottom: 52vh;
+  transition: all 1s ease;
+}
+
 .cloud-container {
   width: 100vw;
   height: 100vh;
