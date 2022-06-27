@@ -11,7 +11,7 @@ let selectedVal;
 
 
 // intiger to loop over myNewText state
-let currentText = 0;
+let currentText = -1;
 
 
 // 
@@ -35,10 +35,10 @@ const myNewImages = [
 
 // declare buttons for nextText()
 const myNewButtons = [
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3 mx-2\" onClick=\"nextText()\">Not yet</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Back</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">More</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText()\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText()\">Not yet</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3 mx-2\" onClick=\"nextText(0)\">Not yet</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">More</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Not yet</button>",
 
 ]
 
@@ -68,7 +68,7 @@ function goToRecord(){
 
 }
 
-async function nextText(){
+async function nextText(x){
   // if all text has been shown return 
     if (currentText == myNewText.length)
     {
@@ -83,21 +83,36 @@ async function nextText(){
         await resolveAftersec();
         return;
     }
-
     // add array data for each step + add-remove animation in & out
     animationBlock.classList.add("animation-class-outro");
     await resolveAftersec();
     animationBlock.classList.remove("animation-class");
     await resolveAftersec();
     animationBlock.classList.remove('animation-class-outro');
-    myText.innerHTML = myNewText[currentText];
-    myImg.innerHTML = myNewImages[currentText];
-    myBtn.innerHTML = myNewButtons[currentText];
     // momanimation();
     animationBlock.classList.add("animation-class");
 
-    // add to intiger counter
-    currentText++;
+             // add to intiger counter
+            if (x == 1){
+              currentText++;
+              console.log('plus 1');
+            }
+            if (x == 0 && currentText == 0){
+              currentText--;
+              myText.innerHTML = "Welcome to the Cloud Full of Memories. A blockchain platform for storing memories of loved ones.";
+              myBtn.innerHTML = "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Enter</button> "
+              return;
+            }
+            if (x == 0 && currentText != 0){
+              currentText--;
+              console.log('minus 1');
+            }
+            
+            console.log(currentText);
+
+            myText.innerHTML = myNewText[currentText];
+            myImg.innerHTML = myNewImages[currentText];
+            myBtn.innerHTML = myNewButtons[currentText];
 
     // set images based on current text
     if (currentText == 1){
