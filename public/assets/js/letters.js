@@ -35,8 +35,8 @@ const myNewImages = [
 
 // declare buttons for nextText()
 const myNewButtons = [
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3 mx-2\" onClick=\"nextText(0)\">Not yet</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3 mx-2\" onClick=\"nextText(0)\">Back</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Start</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Back</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">More</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Not yet</button>",
 ]
@@ -129,7 +129,7 @@ async function nextText(x){
     if (currentText == 3) {
       cloudMove();
       walkingMove();
-      animeBg.style.top = '-3100px';
+      animeBg.style.top = '-2500px';
     }
     if (currentText == 4){
 
