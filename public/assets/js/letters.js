@@ -98,6 +98,7 @@ async function nextText(x){
               console.log('plus 1');
             }
             if (x == 0 && currentText == 0){
+              // if currentext is 0 return original innerhtml
               currentText--;
               myText.innerHTML = "Welcome to the Cloud Full of Memories. A blockchain platform for storing memories of loved ones.";
               myBtn.innerHTML = "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Enter</button> "
@@ -109,7 +110,7 @@ async function nextText(x){
             }
             
             console.log(currentText);
-
+            // change innerhtml based on currentext int
             myText.innerHTML = myNewText[currentText];
             myImg.innerHTML = myNewImages[currentText];
             myBtn.innerHTML = myNewButtons[currentText];
