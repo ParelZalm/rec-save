@@ -39,7 +39,6 @@ const myNewButtons = [
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Save</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Back</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">More</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Not yet</button>",
-
 ]
 
 // document and save selet value for later use in goToRecord()
@@ -70,7 +69,7 @@ function goToRecord(){
 
 async function nextText(x){
   // if all text has been shown return 
-    if (currentText == myNewText.length)
+    if (currentText == myNewText.length -1 && x == 1)
     {
         console.log("the - end")
         removeWalkingMove();
@@ -79,7 +78,7 @@ async function nextText(x){
         await resolveAftersec();
         animationBlock.style.display = "none";
         recordBlock.style.display = "block";
-        myImg.innerHTML = myNewImages[currentText];
+        myImg.innerHTML = myNewImages[currentText + 1];
         await resolveAftersec();
         return;
     }
@@ -128,12 +127,12 @@ async function nextText(x){
       animeBg.style.top = -currentText*1000 + 'px';
     }
     if (currentText == 3) {
-
-    }
-    if (currentText == 4){
       cloudMove();
       walkingMove();
       animeBg.style.top = '-3100px';
+    }
+    if (currentText == 4){
+
     }
   }
 
