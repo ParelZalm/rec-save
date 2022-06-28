@@ -53,14 +53,6 @@ input {
   border-color: #f3f3f3 !important;
 }
 
-.record-button:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
-.play-button:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
 .play-button {
   height: 4em;
   width: 4em;
@@ -404,10 +396,9 @@ img, svg {
 }
 
 #record-guy {
-  width: 500px;
-  left: 60vw;
-  bottom: 52vh;
-  transition: all 1s ease;
+  width: 360px;
+  right: 15vw;
+  bottom: -1vh;
 }
 
 .cloud-container {
@@ -453,6 +444,13 @@ select.selectpicker > option {
 .smooth-gray {
   filter: grayscale(100%);
   background: cadetblue;
+}
+
+.recording-play {
+  width: 30px;
+  top: 27%;
+  position: relative;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

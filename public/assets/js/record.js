@@ -163,12 +163,12 @@ function mediaRecorderDataAvailable(e) {
     };
     recordingElement.appendChild(audio);
     //button element
-    const playButton = document.createElement('button');
-    playButton.classList.add('play-button', 'btn', 'border', 'shadow-sm', 'text-center', 'd-block', 'mx-auto');
+    const playButton = document.createElement('div');
+    playButton.classList.add('play-button', 'text-center', 'd-block', 'mx-auto');
     //image element inside button
     const playImage = document.createElement('img');
     playImage.src = '/images/play.png';
-    playImage.classList.add('img-fluid');
+    playImage.classList.add('recording-play');
     playButton.appendChild(playImage);
     //add event listener to the button to play the recording
     playButton.addEventListener('click', playRecording);
