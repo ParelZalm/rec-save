@@ -19,7 +19,7 @@ let currentText = -1;
 const myNewText = [
     "Save your loved ones' memories in an NFT so they can be cherished forever. Ready for the next step?",
     "Let's consider a theme before we begin. <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
-    "These are a few samples that our users have submitted. To begin listening, simply hover your cursor over one of the images. <audio id='mySound' src='../examples/m1.mp3'/>",
+    "These illustrations contain examples from our users. To begin listening, simply hover your cursor over one of the images. <audio id='mySound' src='../examples/m1.mp3'/>",
     "Are you ready to record your own memory?",
 ]
 
