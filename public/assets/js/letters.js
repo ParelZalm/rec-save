@@ -17,7 +17,7 @@ let currentText = -1;
 // 
 // declare text for nextText()
 const myNewText = [
-    "Preserve your memories of loved ones in an NFT so that they can be cherished forever. Ready to start recording?",
+    "Save your loved ones' memories in an NFT so they can be cherished forever. Ready for the next step?",
     "Let's consider a theme before we begin. <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
     "These are a few samples that our users have submitted. To begin listening, simply hover your cursor over one of the images. <audio id='mySound' src='../examples/m1.mp3'/>",
     "Are you ready to record your own memory?",
@@ -29,7 +29,7 @@ const myNewImages = [
   "",
   "<img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\" onmouseover=\"PlaySound('mySound')\" onmouseout=\"StopSound('mySound')\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
   "<img src = \"images/friendship.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\" style=\"transform: translateY(500px);\"/>",
-  "<img src = \"images/record-guy.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"record-guy\"/>",
+  "<!-- <img src = \"images/record-guy.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"record-guy\"/> -->",
 
 ]
 
@@ -37,7 +37,7 @@ const myNewImages = [
 const myNewButtons = [
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3 mx-2\" onClick=\"nextText(0)\">Back</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Start</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Back</button>",
-  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">More</button>",
+  "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Next</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Back</button>",
   "<button class=\"nostyle-button nextb mt-3\" onClick=\"nextText(1)\">Yes</button><button class=\"nostyle-button skipb mt-3\" onClick=\"nextText(0)\">Not yet</button>",
 ]
 
