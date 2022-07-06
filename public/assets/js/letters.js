@@ -19,7 +19,7 @@ let currentText = -1;
 const myNewText = [
     "Save your loved ones' memories in an NFT so they can be cherished forever. Ready for the next step?",
     "Let's consider a theme before we begin. <select class=\"selectpicker\" onchange=\"inputvReadValue()\" data-size=\"4\"><option value=\"\">Select Theme</option><option value=\"Friendship\">Friendship</option><option value=\"Family\">Family</option><option value=\"Career\">Career</option><option value=\"Legacy\">Legacy</option><option value=\"Else\">Something Else</option></select>",
-    "These illustrations contain examples from our users. To begin listening, simply hover your cursor over one of the images. <audio id='mySound' src='../examples/m1.mp3'/>",
+    "These illustrations contain examples from our users. To begin listening, simply hover your cursor over one of the images. <audio id='mySound1' src='../examples/m1.mp3'/><audio id='mySound2' src='../examples/n1.mp3'/><audio id='mySound3' src='../examples/tes.mp3'/>",
     "Are you ready to record your own memory?",
 ]
 
@@ -27,7 +27,7 @@ const myNewText = [
 const myNewImages = [
   "",
   "",
-  "<img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\" onmouseover=\"PlaySound('mySound')\" onmouseout=\"StopSound('mySound')\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\"/>",
+  "<img src = \"images/soccer.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"soccer\" onmouseover=\"PlaySound('mySound1')\" onmouseout=\"StopSound('mySound1')\"/><img src = \"images/couch.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"couch\" onmouseover=\"PlaySound('mySound2')\" onmouseout=\"StopSound('mySound2')\"/><img src = \"images/love.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"love\" onmouseover=\"PlaySound('mySound3')\" onmouseout=\"StopSound('mySound3')\"/>",
   "<img src = \"images/friendship.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"walk\" style=\"transform: translateY(500px);\"/>",
   "<!-- <img src = \"images/record-guy.svg\" alt=\"playcloud\" class=\"clouds-bottom\" id=\"record-guy\"/> -->",
 
